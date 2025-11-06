@@ -5,15 +5,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Main Thread Started");
-
-       
-        Thread thread1 = new Thread(PrintNumbers);
-
-      
+        Console.WriteLine("Main Thread Started");       
+        Thread thread1 = new Thread(PrintNumbers);    
         Thread thread2 = new Thread(PrintAlphabets);
-
-       
+    
         thread1.Start();
         thread2.Start();
 
@@ -34,7 +29,6 @@ class Program
         }
     }
 
-   
     static void PrintAlphabets()
     {
         for (char c = 'A'; c <= 'E'; c++)
@@ -44,3 +38,4 @@ class Program
         }
     }
 }
+
